@@ -26,14 +26,7 @@ export default (options: Options): Plugin => {
         async setup({onStart, onEnd, initialOptions}: PluginBuild)
         {
             const outdir = resolve(initialOptions.outdir || '', CONFIG.destination)
-            const copied = await copy(CONFIG.context, outdir);
-
-            onStart(async () => {
-                await writeFile(
-                    resolve(outdir, `${NAMESPACE}-manifest.json`),
-                    JSON.stringify(copied, null, 2)
-                )
-            })
+            await copy(CONFIG.context, outdir)
         }
     }
 }
