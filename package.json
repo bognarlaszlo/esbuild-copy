@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "description": "",
-  "keywords": [
-  ],
+  "keywords": [],
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,7 +20,7 @@
     "tiny-glob": "^0.2.9"
   },
   "peerDependencies": {
-    "esbuild": "^0.14.1"
+    "esbuild": "*"
   },
   "devDependencies": {
     "@types/node": "^16.11.11",
